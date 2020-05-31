@@ -4,8 +4,9 @@ new Vue({
     return {
       options: [
         {id: 0, title: 'Главная', url: './index.html'},
-        {id: 1, title: 'Каталог', url: './product.html'},
-        {id: 2, title: 'Контакты', url: './contact.html'}
+        {id: 1, title: 'Каталог', url: './catalog.html'},
+        {id: 2, title: 'Продукты', url: './product.html'},
+        {id: 3, title: 'Контакты', url: './contact.html'}
       ],
       activeId: 0
     }

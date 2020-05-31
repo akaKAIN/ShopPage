@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="asserts/css/style.css">
+  <title>Каталог</title>
+</head>
+<body>
+
+<!--Хэдер-->
+<header class="bg-dark">
+  <div id="header-block"></div>
+</header>
+
+<!--Меню навигации-->
+<div class="container">
+  <div id="menu"></div>
+</div>
+
+<!--Контент-->
+<div class="container mt-5">
+  <div id="catalog" class="d-flex justify-content-center">
+
+    <div v-for="product in products">
+      <div class="card" style="width: 18rem;">
+        <a href="./product.html">
+          <img class="card-img-top" style="height: 10rem" :src="product.url" alt="Miracle Box">
+          <div class="card-body">
+            <p class="card-text">{{ product.short_desc }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--Футер-->
+<footer class="bg-dark">
+  <div id="footer-block"></div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="asserts/js/menu.js"></script>
+<script src="asserts/js/header.js"></script>
+<script src="asserts/js/footer.js"></script>
+<script>
+  new Vue({
+    el: '#catalog',
+    data() {
+      return {
+        products: [
+          {
+            id: 0,
+            title: 'Чудо в упаковке',
+            short_desc: 'Отличный товар со средней скоростью доставки',
+            ful_desc: 'Вам очень понравится этот стильный и удобный в использовании товар, поставляемый совершенно бесплатно.',
+            features: ['компактный', 'экологичный', 'практичный'],
+            url: 'asserts/img/big_package.jpg'
+          },
+          {
+            id: 1,
+            title: 'Малое Чудо в упаковке',
+            short_desc: 'Отличный товар с мнгновенонй коростью доставки',
+            ful_desc: 'Вас очень удивит содержимое, поставляемый совершенно бесплатно.',
+            features: ['аскетичный', 'экологичный', 'удобный', 'невесомый'],
+            url: 'asserts/img/package.jpg'
+          },
+          {
+            id: 2,
+            title: 'Множество чудес в упаковке',
+            short_desc: 'Вам очень понравится содержимое.',
+            ful_desc: 'Не нашли что-то необходимое сразу? - Откройте следующую, наверняка именно там то, что ВЫ ищите.',
+            features: ['всеобъемлющий', 'экологичный', 'самодостаточный', 'ни к чему не обязывающий'],
+            url: 'asserts/img/many_packages.jpg'
+          }
+        ]
+      }
+    }
+  })
+</script>
+</body>
+</html>
