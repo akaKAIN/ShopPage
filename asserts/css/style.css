@@ -1,0 +1,38 @@
+header {
+    height: 120px;
+    /*box-shadow: 10px 5px 5px gray;*/
+    border-radius: 0 0 10px 10px;
+    color: aliceblue;
+    text-align: center;
+    vertical-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0; bottom: 0;
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid grey;
+    text-align: center;
+    margin-top: 20px;
+    padding: 50px;
+    color: aliceblue;
+}
+
+.image {
+    height: 200px;
+    width: auto;
+}
+.map-container-3{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container-3 iframe{
+    height:222px;
+    width:800px;
+}
+#info{
+    height: 200px;
+}

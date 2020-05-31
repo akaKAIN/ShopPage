@@ -8,10 +8,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="asserts/css/style.css">
-  <title>Подробно о товаре</title>
+  <title>Главная</title>
 </head>
 <body>
-
 <!--Хэдер-->
 <header class="bg-dark">
   <div id="header-block"></div>
@@ -24,25 +23,8 @@
 
 <!--Контент-->
 <div class="container mt-5">
-  <div id="app">
-    <button class="btn btn-info" :disabled="counter === 0" @click="counter--">Предыдущий товар</button>
-    <button class="btn btn-info" :disabled="counter === allProducts.length - 1" @click="counter++">Следующий товар
-    </button>
-    <h2 class="mt-5">{{allProducts[counter].title}}</h2>
-    <div class="row">
-      <img class="image" :src="allProducts[counter].url" alt="Product#1">
-      <div>
-        <h5>Характеристики товара:</h5>
-        <ul v-for="option in allProducts[counter].features" :key="option">
-          <li>{{option}}</li>
-        </ul>
-        <h5>Краткое описание товара:</h5>
-        <p title="Краткое описание товара">{{allProducts[counter].short_desc}}</p>
-      </div>
-    </div>
-    <h5>Каталог</h5>
-    <p title="Полное описание товара">{{allProducts[counter].ful_desc}}</p>
-  </div>
+  <img src="asserts/img/package.jpg" style="height: 20rem; width: auto" alt="image">
+<p>Никогда не знаешь что окажется внутри ...</p>
 </div>
 
 <!--Футер-->
@@ -50,9 +32,7 @@
   <div id="footer-block"></div>
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="asserts/js/product_list.js"></script>
 <script src="asserts/js/menu.js"></script>
 <script src="asserts/js/header.js"></script>
 <script src="asserts/js/footer.js"></script>
