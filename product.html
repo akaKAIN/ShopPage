@@ -30,7 +30,9 @@
     </button>
     <h2 class="mt-5">{{allProducts[counter].title}}</h2>
     <div class="row">
-      <img class="image" :src="allProducts[counter].url" alt="Product#1">
+      <a :href="allProducts[counter].url" target="_blank">
+        <img class="image" :src="allProducts[counter].url" alt="Product#1">
+      </a>
       <div>
         <h5>Характеристики товара:</h5>
         <ul v-for="option in allProducts[counter].features" :key="option">
