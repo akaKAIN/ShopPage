@@ -1,3 +1,6 @@
+body{
+    background-color: #f8f8f8;
+}
 header {
     height: 120px;
     /*box-shadow: 10px 5px 5px gray;*/
@@ -35,4 +38,37 @@ footer {
 }
 #info{
     height: 200px;
+}
+
+h5{
+    color: black;
+    background-color: #eaeaea;
+    font-size: 18px;
+    font-weight: 400;
+}
+#short-desc{
+    color: #707070;
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+}
+#full-desc{
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+#features > li{
+    list-style: none;
+    line-height: 14px;
+    color: #484343;
+}
+#features > li:before {
+    content: "@ ";
+}
+
+a.navbar-brand{
+    transition: 0.2s;
 }

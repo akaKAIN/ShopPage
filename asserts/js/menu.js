@@ -13,10 +13,15 @@ new Vue({
   },
   template: ' <nav class="navbar navbar-dark bg-dark">\n' +
     '    <template v-for="option in options">\n' +
-    '      <a class="navbar-brand" :href="option.url">{{ option.title }}</a>\n' +
+    '      <a class="navbar-brand" @mouseover="hoverLink" @mouseleave="unhoverLink" :href="option.url">{{ option.title }}</a>\n' +
     '    </template>\n' +
     '  </nav>',
   methods: {
-    activeLink: function (event) {}
+    hoverLink: function (event) {
+      event.target.style.color = 'yellow'
+    },
+    unhoverLink: function (event) {
+      event.target.style.color = 'white'
+    }
   }
 })

@@ -35,15 +35,15 @@
       </a>
       <div>
         <h5>Характеристики товара:</h5>
-        <ul v-for="option in allProducts[counter].features" :key="option">
+        <ul id="features" v-for="option in allProducts[counter].features" :key="option">
           <li>{{option}}</li>
         </ul>
         <h5>Краткое описание товара:</h5>
-        <p title="Краткое описание товара">{{allProducts[counter].short_desc}}</p>
+        <p id="short-desc" title="Краткое описание товара">{{allProducts[counter].short_desc}}</p>
       </div>
     </div>
-    <h5>Каталог</h5>
-    <p title="Полное описание товара">{{allProducts[counter].ful_desc}}</p>
+    <h5>Полное описание товара:</h5>
+    <p id="full-desc" title="Полное описание товара">{{allProducts[counter].ful_desc}}</p>
   </div>
 </div>
 
