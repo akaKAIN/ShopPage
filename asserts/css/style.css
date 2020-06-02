@@ -2,12 +2,20 @@ body{
     background-color: #f8f8f8;
 }
 header {
-    height: 120px;
-    /*box-shadow: 10px 5px 5px gray;*/
+    height: 150px;
     border-radius: 0 0 10px 10px;
     color: aliceblue;
     text-align: center;
-    vertical-align: center;
+}
+
+svg {
+    fill: #eaeaea;
+}
+
+#logo {
+    height: auto;
+    width: 80px;
+    margin: 15px 50px 0 50px;
 }
 
 footer {
@@ -65,10 +73,36 @@ h5{
     line-height: 14px;
     color: #484343;
 }
+
 #features > li:before {
     content: "@ ";
 }
 
+nav {
+    border-radius: 15px;
+}
+
 a.navbar-brand{
+    padding: 30px 30px 0 30px;
     transition: 0.2s;
+    font-size: large;
+}
+input[type="text"],
+textarea {
+    text-transform: capitalize;
+    color: darkorange;
+}
+
+#image-link {
+    border: 2px solid gray;
+    margin: 0 15px 15px 0;
+}
+
+#image-link:hover {
+    border: 2px solid transparent;
+}
+p:first-letter {
+    font-size: large;
+    color: red;
+    font-weight: 600;
 }

@@ -13,14 +13,13 @@
 <body>
 
 <!--Хэдер-->
-<header class="bg-dark">
+<header class="bg-dark header">
   <div id="header-block"></div>
+  <!--Меню навигации-->
+  <div class="container">
+    <div id="menu"></div>
+  </div>
 </header>
-
-<!--Меню навигации-->
-<div class="container">
-  <div id="menu"></div>
-</div>
 
 <!--Контент-->
 <div class="container mt-5">
@@ -28,12 +27,15 @@
     <button class="btn btn-info" :disabled="counter === 0" @click="counter--">Предыдущий товар</button>
     <button class="btn btn-info" :disabled="counter === allProducts.length - 1" @click="counter++">Следующий товар
     </button>
+
+
+
     <h2 class="mt-5">{{allProducts[counter].title}}</h2>
-    <div class="row">
-      <a :href="allProducts[counter].url" target="_blank">
+    <div class="row justify-content-between">
+      <a id="image-link" :href="allProducts[counter].url" target="_blank">
         <img class="image" :src="allProducts[counter].url" alt="Product#1">
       </a>
-      <div>
+      <div class="col-xl">
         <h5>Характеристики товара:</h5>
         <ul id="features" v-for="option in allProducts[counter].features" :key="option">
           <li>{{option}}</li>
@@ -42,13 +44,35 @@
         <p id="short-desc" title="Краткое описание товара">{{allProducts[counter].short_desc}}</p>
       </div>
     </div>
+    <table class="table table-striped mt-3 mb-5">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Длина</th>
+        <th scope="col">Ширина</th>
+        <th scope="col">Высота</th>
+        <th scope="col">Вес</th>
+        <th scope="col">Коэф. волшебства</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ getValueNum(5, 30) }} см</td>
+        <td>{{ getValueNum(5, 30) }} см</td>
+        <td>{{ getValueNum(5, 30) }} см</td>
+        <td>{{ getValueNum(1, 15) }} кг</td>
+        <td>{{ getValueNum(2, 9) / 10 }}</td>
+      </tr>
+      </tbody>
+    </table>
     <h5>Полное описание товара:</h5>
     <p id="full-desc" title="Полное описание товара">{{allProducts[counter].ful_desc}}</p>
   </div>
 </div>
 
 <!--Футер-->
-<footer class="bg-dark">
+<footer class="bg-dark footer">
   <div id="footer-block"></div>
 </footer>
 

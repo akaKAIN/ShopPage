@@ -17,10 +17,21 @@ new Vue({
     '    </template>\n' +
     '  </nav>',
   methods: {
-    hoverLink: function (event) {
+    sleep: function (ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+    hoverLink: async function(event) {
+      event.target.style.padding = '0 0 0 0'
+      console.log(event.target.style.fontSize = 'xx-large')
+      event.target.style.color = 'red'
+      await this.sleep(100)
       event.target.style.color = 'yellow'
+      await this.sleep(100)
+      event.target.style.color = 'white'
     },
     unhoverLink: function (event) {
+      event.target.style.padding = '30px 30px 0 30px'
+      event.target.style.fontSize = 'large'
       event.target.style.color = 'white'
     }
   }
