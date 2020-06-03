@@ -13,11 +13,17 @@
 <body>
 
 <!--Хэдер-->
-<header class="bg-dark header">
+<header class="bg-dark header d-flex justify-content-between">
   <div id="header-block"></div>
   <!--Меню навигации-->
-  <div class="container">
-    <div id="menu"></div>
+  <div id="menu"></div>
+<!--  <div id="basket">-->
+<!--    <img  src="asserts/img/basket.png" alt="Корзина">-->
+<!--    <div class="circle">-->
+<!--      <template v-if="prodCount===0">+</template>-->
+<!--      <template v-else>{{ prodCount }}</template>-->
+<!--    </div>-->
+<!--    <button @click="prodCount++">PUSH</button>-->
   </div>
 </header>
 
@@ -37,9 +43,12 @@
       </a>
       <div class="col-xl">
         <h5>Характеристики товара:</h5>
+        <div class="wrapper justify-content-between">
         <ul id="features" v-for="option in allProducts[counter].features" :key="option">
           <li>{{option}}</li>
         </ul>
+        <button id="buy-btn" class="btn btn-success">КУПИТЬ</button>
+        </div>
         <h5>Краткое описание товара:</h5>
         <p id="short-desc" title="Краткое описание товара">{{allProducts[counter].short_desc}}</p>
       </div>

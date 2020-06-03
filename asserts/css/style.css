@@ -1,15 +1,18 @@
 body{
     background-color: #f8f8f8;
 }
+
 header {
     height: 150px;
     border-radius: 0 0 10px 10px;
     color: aliceblue;
     text-align: center;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
 }
 
-svg {
-    fill: #eaeaea;
+#logo-msg {
+    margin-top: 20px;
 }
 
 #logo {
@@ -24,10 +27,11 @@ footer {
     height: 100px;
     width: 100%;
     border-top: 1px solid grey;
-    text-align: center;
-    margin-top: 20px;
-    padding: 50px;
+    text-align: right;
+    margin-top: 10px;
+    padding: 40px 50px 20px 50px;
     color: aliceblue;
+    border-radius: 10px 10px 0 0;
 }
 
 .image {
@@ -78,6 +82,12 @@ h5{
     content: "@ ";
 }
 
+#buy-btn {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+
 nav {
     border-radius: 15px;
 }
@@ -104,5 +114,26 @@ textarea {
 p:first-letter {
     font-size: large;
     color: red;
+    font-weight: 600;
+}
+/*Стили корзины товаров*/
+#basket {
+    display: flex;
+}
+#basket img {
+    height: 35px;
+    width: auto;
+}
+#basket .circle {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    right: 10px;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 12px;
+    padding: 5px 4px 0 4px;
+    color: #eaeaea;
+    text-align: center;
     font-weight: 600;
 }
