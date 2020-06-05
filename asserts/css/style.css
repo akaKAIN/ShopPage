@@ -97,8 +97,8 @@ a.navbar-brand{
     transition: 0.2s;
     font-size: large;
 }
-input[type="text"],
-textarea {
+input[type="text"]:focus,
+textarea:focus {
     text-transform: capitalize;
     color: darkorange;
 }
