@@ -34,7 +34,7 @@ new Vue({
         {link: '#', name: 'Fishnet Chair', description: 'Seat and back with upholstery made of cold cure foam\n' +
             '. Steel frame, available in matt powder-coated black\n' +
             ' or highly polished chrome.', imageLink: './asserts/img/product-1.jpg'},
-        {link: '#', name: 'Fish Kitchen', description: 'Some kind of fish shit', imageLink: './asserts/img/product-2.jpg'},
+        {link: '#', name: 'Fish Legs', description: 'Some kind of fish shit', imageLink: './asserts/img/product-2.jpg'},
         {link: '#', name: 'Fishnet Nipples', description: 'Some kind of fish shit', imageLink: './asserts/img/product-3.jpg'},
         {link: '#', name: 'Fishnet Eye', description: 'Some kind of fish shit', imageLink: './asserts/img/product-4.jpg'}
       ]

@@ -7,7 +7,7 @@ Vue.component('info-component', {
     btnTo: String
   },
   template: '<div class="info-component">' +
-    '        <div class="info-title">{{title}}</div>\n' +
+    '        <div class="info-title green">{{title}}</div>\n' +
     '        <div class="info-item">{{item}}</div>\n' +
     '        <div class="info-description">{{description}}</div>\n' +
     '        <a class="info-button white-btn" :href="btnTo">{{btnText}}</a>\n' +

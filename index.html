@@ -42,8 +42,8 @@
     </div>
 
     <!--    Переключатели слайдера-->
-    <div id="circles-handlers">
-      <div id="circles-wrapper" class="row d-flex justify-content-center">
+    <div class="circles-handlers">
+      <div class="circles-wrapper row d-flex justify-content-center">
         <a href="#"><div class="circle"></div></a>
         <a href="#"><div class="circle circle-active"></div></a>
         <a href="#"><div class="circle"></div></a>
@@ -92,6 +92,49 @@
   </div>
 <!------------------------------------------------------------------------------------------------------->
 <!--  Блок трендовых товаров-->
+  <div id="trend-product-block">
+    <div class="margin-wrapper">
+      <title-menu class="title-menu-link" link-text="explore all" link-href="#">
+        <div class="lonely-title">
+          Trending Products
+        </div>
+      </title-menu>
+    </div>
+    <div class="product-list">
+      <div class="card-image-medium-wrapper" v-for="product in products">
+        <card-product-image
+          :image-link="product.imageLink"
+          :link="product.productLink"
+          ></card-product-image>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------------------------------------->
+  <!--  Слайдер-блок-2. HOT-DEAL-->
+  <div id="hot-slider">
+    <div class="slider-block-wrapper">
+      <img class="slider-background" src="./asserts/img/slider.jpg" alt="FishTable">
+
+      <info-component
+        title="Hot deal"
+        item="Fishnet Chair"
+        description="Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
+ or highly polished chrome."
+        btn-text="Order Us"
+        btn-to="#"
+      ></info-component>
+
+      <!--    Переключатели слайдера-->
+      <div class="slider-handlers up-2 absolute">
+        <div class="row d-flex justify-content-center">
+          <a href="#"><div class="circle"></div></a>
+          <a href="#"><div class="circle circle-active"></div></a>
+          <a href="#"><div class="circle"></div></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </div>
 <footer></footer>
@@ -101,5 +144,26 @@
 <script src="./asserts/components/info-component.js"></script>
 <script src="./asserts/components/required-prod-component.js"></script>
 <script src="./asserts/components/compact-info-component.js"></script>
+<script src="./asserts/components/trending-prod-component.js"></script>
+<script>
+  Vue.component('info-component', {
+    props: {
+      title: String,
+      item: String,
+      description: String,
+      btnText: String,
+      btnTo: String
+    },
+    template: '<div class="info-component absolute up-2">' +
+      '        <div class="info-title red">{{title}}</div>\n' +
+      '        <div class="info-item">{{item}}</div>\n' +
+      '        <div class="info-description">{{description}}</div>\n' +
+      '        <a class="info-button white-btn" :href="btnTo">{{btnText}}</a>\n' +
+      '        </div>'
+  });
+  new Vue({
+    el: '#hot-slider'
+  });
+</script>
 </body>
 </html>

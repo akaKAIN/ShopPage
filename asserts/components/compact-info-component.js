@@ -7,7 +7,7 @@ Vue.component('compact-info', {
     btnTo: String
   },
   template: '<div class="compact-info-component">' +
-    '        <div class="compact-info-title">{{title}}</div>\n' +
+    '        <div class="info-title blue">{{title}}</div>\n' +
     '        <div class="compact-info-item">{{item}}</div>\n' +
     '        <div class="compact-info-description">{{description}}</div>\n' +
     '        <a class="info-button white-btn" :href="btnTo">{{btnText}}</a>\n' +

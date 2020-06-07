@@ -42,6 +42,21 @@ a:hover {
     width: 1366px;
     margin: 0 auto;
 }
+.absolute {
+    position: absolute;
+}
+.up-1 {
+    z-index: 1;
+}
+.up-2 {
+    z-index: 2;
+}
+.up-3 {
+    z-index: 3;
+}
+.background-grey {
+    background-color: #c7c7c7;
+}
 
 .slider-block {
     padding: 53px 98px 0 98px;
@@ -97,9 +112,19 @@ a:hover {
     margin-top: 278px;
 }
 
+.green {
+    color: #43a047;
+}
+.blue {
+    color: #1e88e5;
+}
+.red {
+    color: #e53935;
+}
+
+
 .info-title {
     /* Style for "TRENDING" */
-    color: #43a047;
     font-family: "Montserrat-Bold";
     font-size: 18px;
     line-height: 48px;
@@ -161,7 +186,7 @@ a:hover {
 }
 
 /*Переключатели слайдера*/
-#circles-handlers{
+.circles-handlers{
     position: absolute;
     bottom: 25px;
     display: block;
@@ -222,7 +247,7 @@ a:hover {
     border-bottom: 1px solid #6c6c6c;
     padding: 0 20px 19px 10px;
     font-weight: 800;
-    letter-spacing: 0.1px;
+    letter-spacing: .1px;
 
 }
 .title-active > a {
@@ -267,7 +292,7 @@ a:hover {
 
 .card-body-title {
     margin: 20px 0 15px 0;
-    /* Style for "Fishnet Ch" */
+    /* Style for "Fcircles-wrapperishnet Ch" */
     color: #212121;
     font-family: "Montserrat-Bold";
     font-size: 22px;
@@ -305,15 +330,6 @@ a:hover {
     margin-top: 228px;
     margin-left: 51px;
 }
-.compact-info-title {
-    /* Style for "TRENDING" */
-    color: #1e88e5;
-    font-family: "Montserrat-Bold";
-    font-size: 18px;
-    line-height: 48px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-}
 
 .compact-info-item {
     /* Style for "Fishnet Ch" */
@@ -332,3 +348,69 @@ a:hover {
     font-size: 14px;
     line-height: 24px;
 }
+/*лок трендовых товаров*/
+#trend-product-block {
+    /*margin-top: 120px;*/
+    padding: 120px 98px 90px 98px;
+}
+.lonely-title {
+    /* Style for "Trending P" */
+    color: #212121;
+    font-family: "Montserrat-Bold";
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.margin-wrapper {
+    margin-bottom: 64px;
+}
+.card-image-medium-wrapper{
+    margin-bottom: 30px;
+}
+.card-image-medium-wrapper:hover {
+    outline: 1px solid #6c6c6c;
+}
+.card-image-medium{
+    width: 370px;
+    height: 370px;
+}
+/*Слайдер-блок-2. HOT-DEAL*/
+.slider-block-wrapper {
+    width: 1366px;
+    height: auto;
+    position: relative;
+
+}
+.slider-block-wrapper > div {
+    position: absolute;
+    margin-top: 287px;
+    margin-left: 99px;
+}
+.slider-background {
+    width: max-content;
+    height: auto;
+    position: absolute;
+}
+.slider-handlers {
+    position: relative;
+    top: 440px;
+    left: 40%;
+}
+.slider-handlers>div {
+    align-items: center;
+}
+
+
+
+
+
+
+
+
