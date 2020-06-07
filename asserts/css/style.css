@@ -1,0 +1,334 @@
+/*Подключение локальных шрифтов*/
+@font-face {
+    font-family: 'Montserrat';
+    src: local("Montserrat"), local('Montserrat'),
+    url("../fonts/Montserrat/Montserrat.woff") format('woff'),
+    url("../fonts/Montserrat/Montserrat.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: local("Montserrat-Bold"), local('Montserrat-Bold'),
+    url("../fonts/Montserrat-Bold/Montserrat-Bold.woff") format('woff'),
+    url("../fonts/Montserrat-Bold/Montserrat-Bold.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: local("Montserrat-Thin"), local('Montserrat-Thin'),
+    url("../fonts/Montserrat-Thin/Montserrat-Thin.woff") format('woff'),
+    url("../fonts/Montserrat-Thin/Montserrat-Thin.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    outline-style: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.content {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.slider-block {
+    padding: 53px 98px 0 98px;
+    background-image: url("../img/slider-img.png");
+    width: 1366px;
+    height: 800px;
+    position: relative;
+}
+
+.slider-block div {
+    align-items: center;
+}
+
+#logo-menu {
+    width: 185px;
+    height: 22px;
+}
+
+#menu-list {
+    font-family: "Montserrat";
+}
+
+.menu-link-container {
+    padding: 5px 13px 5px 13px;
+}
+
+.menu-link-container > a {
+    vertical-align: middle;
+    color: #969696;
+    text-transform: uppercase;
+}
+
+.menu-link-container > a:hover {
+    color: #212121;
+}
+
+.menu-active {
+    border-bottom: 3px solid #212121;
+}
+
+.menu-active > a {
+    color: #212121;
+}
+
+#search-sign {
+    width: 23px;
+    height: 23px;
+    margin: 0 69px 0 5px;
+}
+
+/*Инфо-блок*/
+#slider-text {
+    margin-top: 278px;
+}
+
+.info-title {
+    /* Style for "TRENDING" */
+    color: #43a047;
+    font-family: "Montserrat-Bold";
+    font-size: 18px;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+.info-item {
+    /* Style for "Fishnet Ch" */
+    color: #212121;
+    font-family: "Montserrat-Thin";
+    font-size: 62px;
+    line-height: 72px;
+    text-transform: uppercase;
+}
+
+.info-description {
+    max-width: 480px;
+    /* Style for "Seat and b" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.info-button {
+    /* Style for "Order Us" */
+    color: #212121;
+    font-family: "Montserrat-Bold";
+    text-align: left;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    /* Text style for "Order Us" */
+    letter-spacing: 3.6px;
+    /* Style for "back" */
+    margin-top: 32px;
+}
+.white-btn {
+    padding: 5px 22px 5px 24px;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    border-radius: 24px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+.white-btn:after {
+    content: ' \203A';
+    font-size: 24px;
+}
+.white-btn:hover {
+    transition: 0.1s;
+    color: #212121;
+    box-shadow: 0 5px 5px 1px rgba(33, 33, 33, 0.35);
+}
+.white-btn:focus {
+    transition: 0.2s;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 33, 0.35);
+}
+
+/*Переключатели слайдера*/
+#circles-handlers{
+    position: absolute;
+    bottom: 25px;
+    display: block;
+    width: 85%;
+}
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #c7c7c7;
+    margin: 0 3px;
+}
+.circle:hover {
+    background-color: #212121;
+}
+.circle-active {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #212121;
+}
+
+/*Блок с предложениями товаров*/
+#required-product-block {
+    padding: 120px 98px;
+}
+/*Правая ссылка*/
+.title-menu-link {
+    font-family: "Montserrat-Bold";
+    /* Style for "explore al" */
+    color: #212121;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+.title-menu {}
+.title-menu-link * {
+    color: #212121;
+}
+.title-menu-link *:hover {
+    text-decoration: none;
+    color: #212121;
+}
+.menu-arrow:after {
+    content: ' \203A';
+    font-size: 28px;
+}
+.title-point {
+    margin-bottom: 75px;
+}
+.title-point > a {
+    /* Style for "Featured" */
+    color: #6c6c6c;
+    font-family: "Montserrat-Bold";
+    font-size: 36px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #6c6c6c;
+    padding: 0 20px 19px 10px;
+    font-weight: 800;
+    letter-spacing: 0.1px;
+
+}
+.title-active > a {
+    color: #212121;
+    border-bottom: 3px solid #212121;
+}
+
+/*Маленькая карточка товара*/
+.card-product-small {
+    width: 270px;
+    height:  270px;
+    /* Style for "back" */
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.card-body {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    padding-top: 60px;
+    width: inherit;
+}
+.card-body > a {
+    color: #212121;
+}
+.card-image {
+    width: 270px;
+    height: 270px;
+    z-index: -1;
+    position: absolute;
+}
+.card-product-small:hover {
+    border: 1px solid #9c9c9c;
+}
+.card-product-small:hover .card-image {
+    opacity: 0.1;
+}
+.card-product-small:hover .card-body {
+    opacity: 1;
+}
+
+.card-body-title {
+    margin: 20px 0 15px 0;
+    /* Style for "Fishnet Ch" */
+    color: #212121;
+    font-family: "Montserrat-Bold";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 29.88px;
+
+}
+.card-body-description {
+    /*Сокращение отоображения текста*/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Style for "Seat and b" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21.91px;
+}
+/*Два эксклюзивных товара*/
+.product-wrapper {
+    width: 683px;
+    height: 683px;
+    position: relative;
+}
+.promo-image {
+    position: absolute;
+}
+
+.compact-info-component {
+    position: absolute;
+    margin-top: 228px;
+    margin-left: 51px;
+}
+.compact-info-title {
+    /* Style for "TRENDING" */
+    color: #1e88e5;
+    font-family: "Montserrat-Bold";
+    font-size: 18px;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+.compact-info-item {
+    /* Style for "Fishnet Ch" */
+    /* Style for "Fishnet Ch" */
+    color: #212121;
+    font-family: "Montserrat-Bold";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.compact-info-description {
+    max-width: 380px;
+    /* Style for "Seat and b" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 24px;
+}
