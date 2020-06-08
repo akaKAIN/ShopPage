@@ -22,7 +22,7 @@
       <div id="nav-bar" class="row">
         <div id="menu-list" v-for="link in menu">
           <div class="menu-link-container" :class="{ 'menu-active' : link.isActive}">
-            <a :href="link.url">{{ link.title }}</a>
+            <a :href ="link.url">{{ link.title }}</a>
           </div>
         </div>
         <img src="./asserts/img/search.png" alt="Иконка строки поиска" id="search-sign">
@@ -132,9 +132,25 @@
   </div>
   <!------------------------------------------------------------------------------------------------------->
   <!-- Блок мобильным приложением-->
+  <div id="mobile-app">
+    <div class="mobile-app-wrapper">
+      <div class="info-wrapper">
+        <div class="title">mobile app</div>
+        <div class="slogan">Find. Follow. Favorite.
+          Discover brands on the go.</div>
+        <div class="slogan-desc">Save your favorites and share your style.</div>
+        <div class="resource-wrapper">
+          <img src="./asserts/img/app-store.jpg" alt="App Store" class="resource-logo">
+          <img src="./asserts/img/google-play.jpg" alt="GooglePlay" class="resource-logo">
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
-<footer></footer>
+<footer>
+
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="./asserts/js/nav-bar.js"></script>

@@ -447,6 +447,56 @@ a:hover {
 }
 
 /*Блок мобильным приложением*/
-
+#mobile-app{}
+.mobile-app-wrapper {
+    background-image: url("../img/back-img.jpg");
+    width: 1366px;
+    height: 516px;
+    position: relative;
+}
+.info-wrapper{
+    position: absolute;
+    top: 125px;
+    left: 99px;
+}
+.title{
+    /* Style for "mobile app" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    /* Text style for "mobile app" */
+    letter-spacing: 1.8px;
+}
+.slogan{
+    /* Style for "Find. Foll" */
+    color: #212121;
+    font-family: "Montserrat-Thin";
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 72px;
+    text-transform: uppercase;
+    max-width: 500px;
+    max-height: 136px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.slogan-desc{
+    /* Style for "Save your" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 33px;
+}
+.resource-wrapper{}
+.resource-logo{
+    width: 135px;
+    height: 40px;
+    margin-right: 10px;
+}
 
 
