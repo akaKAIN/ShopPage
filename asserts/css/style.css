@@ -42,8 +42,11 @@ a:hover {
     width: 1366px;
     margin: 0 auto;
 }
-.absolute {
+.p-abs {
     position: absolute;
+}
+.p-rel {
+    position: relative;
 }
 .up-1 {
     z-index: 1;
@@ -321,9 +324,6 @@ a:hover {
     height: 683px;
     position: relative;
 }
-.promo-image {
-    position: absolute;
-}
 
 .compact-info-component {
     position: absolute;
@@ -352,6 +352,7 @@ a:hover {
 #trend-product-block {
     /*margin-top: 120px;*/
     padding: 120px 98px 90px 98px;
+    clear: both;
 }
 .lonely-title {
     /* Style for "Trending P" */
@@ -384,8 +385,7 @@ a:hover {
 /*Слайдер-блок-2. HOT-DEAL*/
 .slider-block-wrapper {
     width: 1366px;
-    height: auto;
-    position: relative;
+    height: 800px;
 
 }
 .slider-block-wrapper > div {
@@ -396,21 +396,57 @@ a:hover {
 .slider-background {
     width: max-content;
     height: auto;
-    position: absolute;
 }
 .slider-handlers {
     position: relative;
     top: 440px;
-    left: 40%;
+    margin: 0 50%;
 }
 .slider-handlers>div {
     align-items: center;
 }
 
+/*Блок смешанных товаров*/
+#mixin-product-block{}
+.light-block {
+    padding: 120px 0;
+}
+.big-wrapper {
+    height: 570px;
+    width: 570px;
+    position: relative;
+    margin-right: 30px;
+}
+.big-wrapper:last-child {
+    margin-right: 0;
+}
+.big-wrapper-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.small-wrapper {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    margin-right: 30px;
+}
+.small-wrapper:nth-child(2) {
+    margin-right: 0;
+}
+.card-image-big {
+    height: 570px;
+    width: 570px;
+}
+.compact-info-component-inner{
+    position: absolute;
+    margin-top: 186px;
+    margin-left: 31px;
+}
 
-
-
+/*Блок мобильным приложением*/
 
 
 
