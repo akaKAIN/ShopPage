@@ -499,4 +499,96 @@ a:hover {
     margin-right: 10px;
 }
 
+/*БЛОК ФУТЕРА*/
+.footer-wrapper{
+    width: 1366px;
+    height: 384px;
+    margin: 0 auto;
+    padding: 120px 99px 0 99px;
+    background-color: #f7f7f7;
+}
+.left-container{
+    width: 230px;
+}
+.right-container{
+    width: 370px;
+}
+.footer-title{
+    /* Style for "Let’s Stay" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    /* Text style for "L, et’s St" */
+    letter-spacing: 1.8px;
+    margin-bottom: 24px;
+}
+.col-text {
+    /* Style for "Suscribe t" */
+    color: #212121;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 26px;
+}
+/*Форма отправки email-клитента*/
+.send-form {}
+input[type="email"].client-email {
+    width: 370px;
+    height: 48px;
+    padding:0 35px 0 19px;
+    vertical-align: center;
+    /* Style for "your email" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 22px;
 
+}
+input[type="submit"] {
+    background: url("../img/message.jpg") no-repeat 50% 50%;
+    width: 28px;
+    height: 23px;
+    border: none;
+    right: 5px;
+    top: 12px
+}
+.footer-ul {
+    /* Style for "Sales term" */
+    color: #212121;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    /* Text style for "Sales term" */
+    letter-spacing: 0.7px;
+    list-style-type: none;
+    text-align: left;
+}
+.text-left {
+    margin-right: 90px;
+}
+.bottom-text{
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.bottom-text-container {
+/* Style for "Terms & Co" */
+    color: #6c6c6c;
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+/* Text style for "T, erms &" */
+    letter-spacing: 0.6px;
+}
+.social-apps-row {
+    position: absolute;
+    top: 330px;
+    left: 618px
+}
