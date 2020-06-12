@@ -5,33 +5,161 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="asserts/css/style.css">
-  <title>Главная</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./asserts/css/style.css" type="text/css">
+  <title>Home</title>
 </head>
 <body>
-<!--Хэдер-->
-<header class="bg-dark header d-flex justify-content-between">
-  <div id="header-block"></div>
-  <!--Меню навигации-->
-  <div id="menu"></div>
-</header>
+<header></header>
 
-<!--Контент-->
-<div class="container mt-5">
-  <img src="asserts/img/package.jpg" style="height: 20rem; width: auto" alt="image">
-<p>Никогда не знаешь что окажется внутри ...</p>
+<div class="content">
+  <!--  Блок слайдера и меню навигации-->
+  <div class="slider-block">
+    <!--    Меню навигации и логотип-->
+    <div class="row d-flex justify-content-between ml-2">
+      <img id="logo-menu" src="./asserts/img/logo.png" alt="Логотип 'Interior'">
+      <div id="nav-bar" class="row">
+        <div id="menu-list" v-for="link in menu">
+          <div class="menu-link-container" :class="{ 'menu-active' : link.isActive}">
+            <a :href ="link.url">{{ link.title }}</a>
+          </div>
+        </div>
+        <img src="./asserts/img/search.png" alt="Иконка строки поиска" id="search-sign">
+      </div>
+    </div>
+
+    <!--    Инфо-блок-->
+    <div id="slider-text">
+      <info-component title="TRENDING" item="Fishnet Chair" description="Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
+ or highly polished chrome." btn-text="Order Us" btn-to="#"
+      ></info-component>
+    </div>
+
+    <!--    Переключатели слайдера-->
+    <div class="circles-handlers">
+      <div class="circles-wrapper row d-flex justify-content-center">
+        <a href="#"><div class="circle"></div></a>
+        <a href="#"><div class="circle circle-active"></div></a>
+        <a href="#"><div class="circle"></div></a>
+      </div>
+    </div>
+  </div>
+<!------------------------------------------------------------------------------------------------------->
+<!--  Блок с предложениями товаров-->
+  <div id="required-product-block">
+    <div class="title-menu" id="title-menu">
+      <title-menu class="title-menu-link" link-text="explore all" link-href="#">
+        <div class="row ml-1">
+          <div class="title-point title-active">
+            <a href="#">Featured</a>
+          </div>
+          <div class="title-point">
+            <a href="#">New</a>
+          </div>
+        </div>
+      </title-menu>
+    </div>
+    <div class="row d-flex justify-content-between" >
+    <card-product-small v-for="product in productRequired" :link="product.link" :name="product.name" :description="product.description" :image-link="product.imageLink"
+    ></card-product-small>
+    </div>
+  </div>
+<!------------------------------------------------------------------------------------------------------->
+<!--Два эксклюзивных товара-->
+  <div id="two-exclusive-product">
+    <div class="row ml-1">
+      <div class="product-wrapper" v-for="product in products">
+          <img class="p-abs" :src="product.imageLink" alt="Promo-product">
+          <compact-info :title="product.title" :item="product.item" :description="product.description" btn-text="Order Us" :btn-to="product.link"
+          ></compact-info>
+      </div>
+    </div>
+  </div>
+<!------------------------------------------------------------------------------------------------------->
+<!--  Блок трендовых товаров-->
+  <div id="trend-product-block">
+    <div class="margin-wrapper">
+      <title-menu class="title-menu-link" link-text="explore all" link-href="#">
+        <div class="lonely-title">
+          Trending Products
+        </div>
+      </title-menu>
+    </div>
+    <div class="product-list">
+      <div class="card-image-medium-wrapper" v-for="product in products">
+        <card-product-image :image-link="product.imageLink" :link="product.productLink"
+          ></card-product-image>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------------------------------------->
+  <!--  Слайдер-блок-2. HOT-DEAL-->
+  <div id="hot-slider">
+    <div class="slider-block-wrapper p-rel">
+      <img class="slider-background p-abs" src="./asserts/img/slider.jpg" alt="FishTable">
+      <info-component class="up-2" title="Hot deal" item="Fishnet Chair"
+        description="Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
+ or highly polished chrome."
+        btn-text="Order Us" btn-to="#"
+      ></info-component>
+      <!--    Переключатели слайдера-->
+      <div class="circles-handlers">
+        <div class="circles-wrapper row d-flex justify-content-center align-items-center">
+          <a href="#"><div class="circle"></div></a>
+          <a href="#"><div class="circle circle-active"></div></a>
+          <a href="#"><div class="circle"></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------------------------------------->
+  <!-- Блок смешанных товаров-->
+  <div id="mixin-product-block" class="light-block">
+    <div class="row d-flex justify-content-center">
+      <div class="big-wrapper">
+        <img class="p-abs" :src="product.imageLink" alt="Promo-product">
+        <compact-info :title="product.title" :item="product.item" :description="product.description" btn-text="Order Us" :btn-to="product.link">
+        </compact-info>
+      </div>
+      <div class="big-wrapper big-wrapper-container">
+        <div class="small-wrapper" v-for="prod in productRequired">
+          <card-product-small :image-link="prod.imageLink" :name="prod.name" :description="prod.description" :link="prod.link">
+          </card-product-small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------------------------------------->
+  <!-- Блок мобильным приложением-->
+  <div id="mobile-app">
+    <div class="mobile-app-wrapper">
+      <div class="info-wrapper">
+        <div class="title">mobile app</div>
+        <div class="slogan">Find. Follow. Favorite.
+          Discover brands on the go.</div>
+        <div class="slogan-desc">Save your favorites and share your style.</div>
+        <div class="resource-wrapper">
+          <img src="./asserts/img/app-store.jpg" alt="App Store" class="resource-logo">
+          <img src="./asserts/img/google-play.jpg" alt="GooglePlay" class="resource-logo">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!--Футер-->
-<footer class="bg-dark footer">
-  <div id="footer-block"></div>
-</footer>
-
+<!------------------------------------------------------------------------------------------------------->
+<!-- FOOTER-->
+<footer id="app-footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="asserts/js/menu.js"></script>
-<script src="asserts/js/header.js"></script>
-<script src="asserts/js/footer.js"></script>
+<script src="./asserts/js/nav-bar.js"></script>
+<script src="./asserts/components/info-component.js"></script>
+<script src="./asserts/components/required-prod-component.js"></script>
+<script src="./asserts/components/compact-info-component.js"></script>
+<script src="./asserts/components/trending-prod-component.js"></script>
+<script src="./asserts/components/hot-prod-component.js"></script>
+<script src="./asserts/components/mixin-block-component.js"></script>
+<script src="./asserts/components/footer-component.js"></script>
 </body>
 </html>
