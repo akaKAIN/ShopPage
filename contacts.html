@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="asserts/css/style.css" type="text/css">
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+  <custom-header page-title="Contact Us"></custom-header>
+
+  <div class="content">
+    <div class="contact-block">
+      <div class="card-wrapper" v-for="contact in contactList">
+        <contact-card
+            :country="contact.country"
+            :phone="contact.phone"
+            :email="contact.email"
+            :address="contact.address"
+        ></contact-card>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER-->
+  <footer id="app-footer"></footer>
+</div>
+
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- production version, optimized for size and speed -->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+<script src="./asserts/components/footer-component.js"></script>
+<script>
+  Vue.component('custom-header', {
+    props: {
+      pageTitle: String
+    },
+    template: '<div id="header">' +
+      '<div class="row d-flex justify-content-between ml-1">\n' +
+      '    <img id="logo-menu" src="./asserts/img/logo.png" alt="Логотип \'Interior\'">\n' +
+      '    <div id="nav-bar" class="row">\n' +
+      '      <div id="menu-list" v-for="link in menu">\n' +
+      '        <div class="menu-link-container" :class="{ \'menu-active\' : link.isActive}">\n' +
+      '          <a :href="link.url">{{ link.title }}</a>\n' +
+      '        </div>\n' +
+      '      </div>\n' +
+      '      <img src="./asserts/img/search.png" alt="Иконка строки поиска" id="search-sign">\n' +
+      '    </div>\n' +
+      '  </div><div class="title-page-slogan">\n' +
+      '    {{ pageTitle }}\n' +
+      '  </div>'
+      +
+      '</div>',
+    data() {
+      return {
+        menu: [
+          {title: 'home', url: './index.html', isActive: false},
+          {title: 'products', url: './products.html', isActive: false},
+          {title: 'history', url: '#', isActive: false},
+          {title: 'showroom', url: '#', isActive: false},
+          {title: 'contact', url: './contacts.html', isActive: true}
+        ]
+      }
+    }
+  })
+
+  Vue.component('contact-card', {
+    props: {
+      country: String,
+      phone: String,
+      email: String,
+      address: String
+    },
+    template: '<div class="contact-card">\n' +
+      '          <div class="card-body-wrapper">\n' +
+      '            <div class="card-body-point-wrapper">\n' +
+      '              <img class="gps-marker" src="./asserts/img/gps-marker2.png" alt="gps marker">\n' +
+      '            </div>\n' +
+      '            <div class="card-body-point-wrapper">\n' +
+      '              <div class="country">{{country}}</div>\n' +
+      '            </div>\n' +
+      '            <div class="card-body-point-wrapper">\n' +
+      '              <div class="point-title">phone</div>\n' +
+      '              <div class="point-content">{{phone}}</div>\n' +
+      '            </div>\n' +
+      '            <div class="card-body-point-wrapper">\n' +
+      '              <div class="point-title">email</div>\n' +
+      '              <div class="point-content">{{email}}</div>\n' +
+      '            </div>\n' +
+      '            <div class="card-body-point-wrapper">\n' +
+      '              <div class="point-title">address</div>\n' +
+      '              <div class="point-content-light">{{address}}</div>\n' +
+      '            </div>\n' +
+      '          </div>\n' +
+      '        </div>'
+  })
+
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        contactList: [
+          {country: 'California', phone: '1900 - 1234 - 5678', email: 'info@interior.com', address: '12 W 1st St, 90001 Los Angeles, California'},
+          {country: 'California', phone: '1900 - 1234 - 5678', email: 'info@interior.com', address: '12 W 1st St, 90001 Los Angeles, California'},
+          {country: 'California', phone: '1900 - 1234 - 5678', email: 'info@interior.com', address: '12 W 1st St, 90001 Los Angeles, California'}
+        ]
+      }
+    }
+  })
+</script>
+</body>
+</html>

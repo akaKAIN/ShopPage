@@ -19,6 +19,6 @@ var Product = (function () {
     return Product;
 }());
 exports.Product = Product;
-var one = new Product('table', 'qweqwe');
-var two = new Product('Sofa', 'sssooooooft');
+var one = new Product('FishShit', 'desc');
+var two = new Product('Chiar', 'fullDesc');
 console.log(one, two);
